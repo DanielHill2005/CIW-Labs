@@ -18,13 +18,17 @@ function showUpper(checked) {
 }
 
 function emailTest(form)  {
-    if (form.email_address.value.indexOf("@", 0) < 0) {
-    alert("This is not a valid e-mail address!");
-  } if else (form.email_address.length() > 6){
-    alert("This is not a valid e-mail address!");
-  } else {
-    alert("This could be a valid e-mail address");
-  }
+ var goodemail = 0;
+ if (form.email_address.value.indexOf("@", 0) < 0) {
+  alert("This is not a valid e-mail address!");
+  goodemail = 1;
+ } else {
+  if(document.myForm.email_address.value.length < 6 ){ alert("This is not a valid e-mail address!");
+  goodemail = 1;}
+ }
+ if(goodemail == 0){
+   alert("This e-mail address is valid");
+  };
 }
 
 function showFirst2(form)  {
