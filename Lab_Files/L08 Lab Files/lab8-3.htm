@@ -7,13 +7,8 @@
 <script type="text/javascript">
 <!--
     
-function* integer (){
-    var num = 1;
-    while(true)
-    yield num++;
-}    
-var get = integer();
-for(let x of get){
+var num = [1, 2, 3, 4, 5];
+for(let x of num){
     document.write(x)
 }
 //-->
