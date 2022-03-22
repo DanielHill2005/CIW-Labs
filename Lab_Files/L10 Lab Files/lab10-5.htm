@@ -9,7 +9,13 @@
         var str = '';
         var elem = document.getElementById('myForm').elements;
 
-       //Insert for statement here//
+       for (i = 0; i < len; i++){
+         if (elem[i].value.length < 1){
+            alert(`Please enter something into the field: ${elem[i].name}`);
+            document.getElementById(elem[i].name).focus();
+            return false;
+         }
+       }
 
 
      }
@@ -20,7 +26,7 @@
 <h3>CIW JavaScript Specialist</h3>
 <hr />
 
-<form id="myForm" name="myForm" action="lab7-5a.htm">
+<form id="myForm" name="myForm" action="lab10-5a.htm">
 <p>
 Your Name: <br /><br />
 <input type="text" name="Your_Name" id="Your_Name"  value="enter your name" />
