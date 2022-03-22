@@ -12,12 +12,16 @@
   var theSelections = "Selected values:\n";
   
 // Create for loop
-  
+  for (i = 0; i < len; i++){   
+    if (myForm.mySelect.options[i].selected == true){
+      theSelections += `${myForm.mySelect.options[i].text} \n`
+    }
+  }
   
   
   
   // Display selections
-
+  alert(theSelections);
   } 
 
 //-->
@@ -28,7 +32,7 @@
 <hr />
 <form name="myForm" id="myForm">
 Select items<br />
-<select name="mySelect" multiple= multiple>
+<select name="mySelect" multiple="multiple">
 <option value="1">First option</option>
 <option value="2">Second option</option>
 <option value="3">Third option</option>
