@@ -9,7 +9,38 @@
 
 
     function validate(form) {
-
+        var selected = '';
+        for (i = 0; i < ccForm.elements.length; i++){
+            if (ccForm.elements[i].checked == true){
+                var selected = i;
+            }
+        }
+        switch (selected){
+            case 0:
+                if (ccForm.elements[3].value[0] == '4' && ccForm.elements[3].value.length == 16) {
+                    alert('Thanks for your input')
+                    return true;
+                } else {
+                    alert('Please change the credit card type or number')
+                    return false;
+                };
+            case 1:
+            if (ccForm.elements[3].value[0] == '5' && ccForm.elements[3].value.length == 16) {
+                    alert('Thanks for your input')
+                    return true;
+                } else {
+                    alert('Please change the credit card type or number')
+                    return false;
+                };
+            case 2: 
+            if (ccForm.elements[3].value[0] == '3' && ccForm.elements[3].value.length == 15) {
+                    alert('Thanks for your input')
+                    return true;
+                } else {
+                    alert('Please change the credit card type or number')
+                    return false;
+                };
+        }
 
 
 
